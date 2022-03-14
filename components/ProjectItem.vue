@@ -16,13 +16,16 @@ defineProps({
 
 <style lang="postcss" scoped>
 
+.project-item {
+    transition: opacity 0.3s linear 2s;
+}
 .project-item .project-description {
     display:none;
 }
 
 .project-item:hover {
     cursor:pointer;
-    @apply p-4 bg-indigo-50;
+    @apply p-4;
 }
 
 .project-item:hover .project-description {
