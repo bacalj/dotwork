@@ -1,7 +1,10 @@
 <script setup>
 
-  const query = groq`*[_type == "project"]`
-  const { data, refresh } = useSanityQuery(query)  
+const query = groq`{ "projects": *[_type == "project"] }`
+
+const sanity = useSanity()
+
+const { data } = await useAsyncData('projects', () => sanity.fetch(query))
 
   console.log(data)
 </script>
@@ -9,6 +12,9 @@
 
 <template>
   <div>
-    hello
+    <pre>
+         {{ data }}
+    </pre>
+ 
   </div>
 </template>
