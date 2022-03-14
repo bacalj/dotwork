@@ -1,0 +1,33 @@
+<script setup>
+defineProps({
+  item: Object,
+})
+
+</script>
+
+<template>
+    <li class="project-item mb-2">
+        <span class="project-name">{{ item.title }}</span>&nbsp;&nbsp;
+        <span class="mb-6 project-description text-gray-500 text-sm">{{ item.description }}</span>
+    </li>
+</template>
+
+<style lang="postcss" scoped>
+
+.project-item .project-description {
+    display:none;
+}
+
+.project-item:hover {
+    cursor:pointer;
+    @apply p-4 bg-indigo-50;
+}
+
+.project-item:hover .project-description {
+    display: inline;
+}
+
+.project-item:hover .project-name {
+    font-weight: bold;
+}
+</style>
