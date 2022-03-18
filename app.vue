@@ -1,6 +1,6 @@
 <script setup>
 
-  const query = groq`*[_type == "project"]| order(title asc)`
+  const query = groq`*[_type == "project" && !(_id in path('drafts.**'))]| order(title asc)`
   const { data } = await useSanityQuery(query)
 
   
