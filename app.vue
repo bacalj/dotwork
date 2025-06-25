@@ -15,14 +15,16 @@
 
       <hr class="mb-3">
 
-      <!-- <div class="pb-6 text-gray-600">
+      <!-- 
+      <div class="pb-6 text-gray-600">
         Web dev projects have a ⭐.  <br>The others are either utilities or static materials.
         <br>Stay tuned as there are more items to dig up...
         <br> <a href="https://github.com/bacalj">GitHub</a> | <a href="https://twitter.com/joe_bacal">Twitter</a>
-      </div> -->
+      </div>
 
       <hr class="mb-3">
-
+       -->
+    
       <ul class="projects">
         <project-item class="text-gray-800" v-for="(d, i) in data" :key="i" :item="d"></project-item>
       </ul>
