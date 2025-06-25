@@ -9,7 +9,7 @@ defineProps({
     <li class="project-item mb-2">
         <span class="project-name">
             <!-- <span v-if="item.star"> ⭐ </span><a :href="item.links[0]" target="_blank">{{ item.title }}</a> -->
-        </span>&nbsp;&nbsp;
+        </span>&nbsp;&nbsp;<br/>
         <span class="mb-6 project-description text-gray-500 text-sm">{{ item.description }}</span>
     </li>
 </template>
@@ -19,9 +19,10 @@ defineProps({
 .project-item {
     transition: opacity 0.3s linear 2s;
 }
-.project-item .project-description {
-    display:none;
-}
+  
+// .project-item .project-description {
+//   display:none;
+// }
 
 .project-item:hover {
     cursor:pointer;
