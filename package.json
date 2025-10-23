@@ -1,15 +1,18 @@
 {
   "private": true,
+  "engines": {
+    "node": ">=18.12.0"
+  },
   "scripts": {
     "dev": "nuxi dev",
     "build": "nuxi build",
     "start": "node .output/server/index.mjs"
   },
   "devDependencies": {
-    "@nuxtjs/tailwindcss": "^5.0.0",
-    "nuxt3": "latest"
+    "@nuxtjs/tailwindcss": "^6.12.1",
+    "nuxt": "^3.13.0"
   },
   "dependencies": {
-    "@nuxtjs/sanity": "^1.1.1"
+    "@nuxt/content": "^2.13.2"
   }
 }
