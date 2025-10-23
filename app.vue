@@ -1,9 +1,11 @@
 <script setup>
 
-  const query = groq`*[_type == "project" && !(_id in path('drafts.**'))]| order(title asc)`
-  const { data } = await useSanityQuery(query)
+  const { data } = await useAsyncData('projects', () =>
+    queryContent('projects')
+      .sort({ title: 1 })
+      .find()
+  )
 
-  
   console.log(data.value)
 
 </script>
